@@ -1,0 +1,91 @@
+@import "../../styles/base";
+
+.modal {
+    background: #fff;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    border-radius: @border-radius-base;
+    &-mask {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.65);
+        z-index: 1000;
+    }
+    &-mask-hidden, &-wrap-hidden {
+        display: none;
+    }
+    &-wrap {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+    }
+    &-header {
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        &-title {
+            flex: 1;
+            text-align: center;
+            color: #040404;
+            font-size: 20px;
+        }
+        &-close {
+            display: flex;
+            width: 64px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            &-btn {
+                display: inline-block;
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                background: url('../../assets/icon/icon-close.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+    &-body {
+        padding: 10px 30px 30px 30px;
+    }
+    &-footer {
+        text-align: center;
+    }
+    &-error-wrap {
+        position: relative;
+        .modal-error {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: @text-color-strong;
+            &-mask {
+                pointer-events: none;
+                user-select: none;
+                overflow: hidden;
+                opacity: 0.5;
+                filter: blur(0.5px);
+            }
+        }
+    }
+    &-error-hidden {
+        .modal-error {
+            display: none;
+        }
+    }
+}

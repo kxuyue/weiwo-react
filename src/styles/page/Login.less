@@ -1,0 +1,44 @@
+.login-page {
+    height: 100vh;
+    background: url('../../assets/bg-login.png') no-repeat;
+    background-size: 100% 100%;
+}
+.login {
+    position: absolute;
+    right: 290px;
+    top: 230px;
+    &-title {
+        font-size: 22px;
+        color: #707070;
+        margin-bottom: 30px;
+    }
+    &-form {
+        &-item {
+            width: 250px;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.box {
+    margin: 30px 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: @font-size-small;
+    color: @text-color;
+    span {
+        &:last-child {
+            cursor: pointer;
+        }
+    }
+}
+
+.register-text {
+    text-align: right;
+    color: @text-color;
+    font-size: @font-size-small;
+    span {
+        color: #ff3344;
+        cursor: pointer;
+    }
+}
